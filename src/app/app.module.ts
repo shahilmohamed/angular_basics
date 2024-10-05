@@ -9,6 +9,7 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { StringInterpolationComponent } from './string-interpolation/string-interpolation.component';
 import { StudentComponent } from './student/student.component';
 import { AdditionComponent } from './addition/addition.component';
+import { ChangeEventComponent } from './change-event/change-event.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AdditionComponent } from './addition/addition.component';
     PropertyBindingComponent,
     StringInterpolationComponent,
     StudentComponent,
-    AdditionComponent
+    AdditionComponent,
+    ChangeEventComponent
   ],
   imports: [
     BrowserModule,
