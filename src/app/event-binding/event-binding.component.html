@@ -1,0 +1,6 @@
+<p>event-binding works!</p>
+<p>Click event</p>
+<button (click)="onClick()">Click</button>
+<button value= "Doller value"(click)="onDollerElement($event)">$Event</button><br>
+<input #inputName type="text" placeholder="Enter name"><br>
+<button (click)="onSend(inputName)">send</button>

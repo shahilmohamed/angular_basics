@@ -1,0 +1,5 @@
+<p [class]="myclass">class-binding works!</p>
+<p [class.success]="rating>5"
+    [class.warning]="rating==5"
+    [class.failure]="rating<5">class-binding with condition</p>
+<p [ngClass]="jsonObj">class-binding-using-ngClass</p>
