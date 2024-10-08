@@ -1,0 +1,26 @@
+<p>for-directive works!</p>
+<!-- <ul>
+    <li *ngFor="let n  of name; index as i">
+        {{n}}
+    </li>
+</ul> -->
+<table border="1px">
+    <thead>
+        <th>S.no</th>
+        <th>Product</th>
+        <th>Price</th>
+        <th>Quantity</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of product index as i"
+        (mouseover)="mouseOv(item)"
+        [ngClass]="{highlight: rowname===item.proname}"
+        (mouseout)="mouseOt()"
+        >
+            <td>{{i+1}}</td>
+            <td>{{item.proname}}</td>
+            <td>{{item.proprice}}</td>
+            <td>{{item.proqty}}</td>
+        </tr>
+    </tbody>
+</table>

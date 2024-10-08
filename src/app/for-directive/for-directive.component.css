@@ -1,0 +1,25 @@
+.highlight
+{
+    background-color: green;
+    color: white;
+}
+.sn
+{
+    background-color: red;
+    color: white;
+}
+.it
+{
+    background-color: black;
+    color: white;
+}
+.pr
+{
+    background-color: blue;
+    color: white;
+}
+.qt
+{
+    background-color: white;
+    color: black;
+}

@@ -10,6 +10,12 @@ import { StringInterpolationComponent } from './string-interpolation/string-inte
 import { StudentComponent } from './student/student.component';
 import { AdditionComponent } from './addition/addition.component';
 import { ChangeEventComponent } from './change-event/change-event.component';
+import { SquareCubeComponent } from './square-cube/square-cube.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { FormsModule } from '@angular/forms';
+import { IfDirectiveComponent } from './if-directive/if-directive.component';
+import { ForDirectiveComponent } from './for-directive/for-directive.component';
+import { SwitchDirectiveComponent } from './switch-directive/switch-directive.component';
 
 @NgModule({
   declarations: [
@@ -20,11 +26,17 @@ import { ChangeEventComponent } from './change-event/change-event.component';
     StringInterpolationComponent,
     StudentComponent,
     AdditionComponent,
-    ChangeEventComponent
+    ChangeEventComponent,
+    SquareCubeComponent,
+    TwoWayBindingComponent,
+    IfDirectiveComponent,
+    ForDirectiveComponent,
+    SwitchDirectiveComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

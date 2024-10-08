@@ -1,0 +1,7 @@
+<p>if-directive works!</p>
+<div *ngIf="rating<4; else temp">
+    <h2>True</h2>
+</div>
+<ng-template #temp>
+    <h2>False</h2>
+</ng-template>

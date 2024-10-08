@@ -1,0 +1,40 @@
+<div class="container1">
+    <div class="container2">
+        <h2>Task 1</h2>
+        <div>
+            <p [style.color]="txtcolor" [style.background-color]="bgcolor">Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Dicta neque blanditiis provident illum exercitationem. Totam ut aspernatur similique
+                officia quo natus blanditiis pariatur laborum? Consequatur natus laudantium vitae possimus quaerat.</p>
+            <button (click)="onClick()">Click</button>
+        </div>
+    </div>
+
+    <div class="container2">
+        <h2>Task 2</h2>
+        <input (change)="onchange($event)" type="text" placeholder="Enter number"><br>
+        <form #myform>
+            <label>
+                <input (click)="onsquare()" type="radio" name="action" value="square">
+                square
+            </label><br>
+            <label>
+                <input (click)="oncube()" type="radio" name="action" value="cube">
+                cube
+            </label><br>
+        </form>
+        <input type="text" [value]="result"><br>
+    </div>
+
+    <div class="container2">
+        <h2>Task 3</h2>
+        <button [style.font-style]="btnfont" [style.color]="btnclr" [style.background-color]="btnbg"
+            (click)="onButton()">Click to see magic</button><br>
+    </div>
+
+    <div class="container2">
+        <h2>Task 4</h2>
+        <button (click)="onImage()">Click to view image</button><br>
+        <img [src]="genimage" alt="" height="250px" width="250px"><br>
+    </div>
+
+</div>
