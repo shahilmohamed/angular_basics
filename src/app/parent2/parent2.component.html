@@ -1,0 +1,13 @@
+<p>parent2 works!</p>
+<div #divtemp>
+    <p>hello this is the parent component</p>
+</div>
+<div class="mainDiv">
+    <div class="buttonDiv">
+        <button (click)="onProperty()">Access child property</button>
+        <button (click)="onMethod()">Access child method</button>
+    </div>
+    <div class="childDiv">
+        <app-child2></app-child2>
+    </div>
+</div>

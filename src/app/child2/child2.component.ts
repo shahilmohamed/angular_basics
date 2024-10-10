@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Child2Component implements OnInit {
 
+  name:string="Default value";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onsend()
+  {
+    alert("Welcome "+this.name)
   }
 
 }
