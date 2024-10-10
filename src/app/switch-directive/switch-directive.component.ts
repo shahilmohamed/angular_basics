@@ -6,8 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./switch-directive.component.css']
 })
 export class SwitchDirectiveComponent implements OnInit {
+  choice:string='black'
 
   constructor() { }
+
+  onsend(value:string)
+  {
+    this.choice=value.toLowerCase().trim();
+  }
 
   ngOnInit(): void {
   }
