@@ -1,0 +1,16 @@
+<p>inbuild-pipe works!</p>
+<h2>{{strData}}</h2>
+<h2>{{strData | lowercase}}</h2>
+<h2>{{strData | uppercase}}</h2>
+<h2>{{strData | titlecase}}</h2>
+<h2>{{strData | slice:2:9}}</h2>
+<h2>{{0.025 | percent}}</h2> 
+<!-- output is 3% -->
+ <h2>{{0.025 | percent:'1.1'}}</h2>
+ <!-- output 2.5% -->
+  <h2>{{0.912 | percent:'2.2'}}</h2>
+  <!-- output 91.20% -->
+<h2>{{25 | currency : 'INR'}}</h2>
+<!--output ₹25.00 -->
+<h2>{{25 | currency : 'INR' : 'code'}}</h2>
+<!-- output INR25.00 -->
