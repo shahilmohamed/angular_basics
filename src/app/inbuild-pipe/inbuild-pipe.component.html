@@ -1,16 +1,35 @@
 <p>inbuild-pipe works!</p>
-<h2>{{strData}}</h2>
-<h2>{{strData | lowercase}}</h2>
-<h2>{{strData | uppercase}}</h2>
-<h2>{{strData | titlecase}}</h2>
-<h2>{{strData | slice:2:9}}</h2>
-<h2>{{0.025 | percent}}</h2> 
+<!-- <h2>{{strData}}</h2> -->
+<!-- <h2>{{strData | lowercase}}</h2> -->
+<!-- <h2>{{strData | uppercase}}</h2> -->
+<!-- <h2>{{strData | titlecase}}</h2> -->
+<!-- <h2>{{strData | slice:2:9}}</h2> -->
+<!-- <h2>{{0.025 | percent}}</h2>  -->
 <!-- output is 3% -->
- <h2>{{0.025 | percent:'1.1'}}</h2>
+ <!-- <h2>{{0.025 | percent:'1.1'}}</h2> -->
  <!-- output 2.5% -->
-  <h2>{{0.912 | percent:'2.2'}}</h2>
+  <!-- <h2>{{0.912 | percent:'2.2'}}</h2> -->
   <!-- output 91.20% -->
-<h2>{{25 | currency : 'INR'}}</h2>
+<!-- <h2>{{25 | currency : 'INR'}}</h2> -->
 <!--output ₹25.00 -->
-<h2>{{25 | currency : 'INR' : 'code'}}</h2>
+<!-- <h2>{{25 | currency : 'INR' : 'code'}}</h2> -->
 <!-- output INR25.00 -->
+
+<!-- <h2>{{5.6765665|number:'1.2-3'}} </h2> -->
+<!-- output 5.677 -->
+ <!-- <h2>{{num2|number:'2.2-3'}}</h2> -->
+
+ 
+<!-- Date -->
+ <h3>{{mydate}}</h3>
+ <h3>{{mydate|date:'longDate'}}</h3>
+ <h3>{{mydate|date:'mediumDate'}}</h3>
+ <h3>{{mydate|date:'shortDate'}}</h3>
+ <h3>{{mydate|date:'dd'}}</h3>
+ <h3>{{mydate|date:'MM'}}</h3>
+ <h3>{{mydate|date:'yy'}}</h3>
+ <h3>{{mydate|date:'yyyy'}}</h3>
+ <h3>{{mydate|date:'hh:mm:ss'}}</h3>
+ <h3>{{mydate|date:'hh:mm a'}}</h3>
+ <!-- chaining of pipe -->
+ <h3>{{mydate|date:'longDate'|uppercase}}</h3>

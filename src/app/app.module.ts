@@ -21,6 +21,11 @@ import { Child1Component } from './child1/child1.component';
 import { Child2Component } from './child2/child2.component';
 import { Parent2Component } from './parent2/parent2.component';
 import { InbuildPipeComponent } from './inbuild-pipe/inbuild-pipe.component';
+import { CustomPipeComponent } from './custom-pipe/custom-pipe.component';
+import { SummaryPipe } from './utility/summary.pipes';
+import { CourseComponent } from './course/course.component';
+import { CourseService } from './course.service';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -41,14 +46,18 @@ import { InbuildPipeComponent } from './inbuild-pipe/inbuild-pipe.component';
     Child1Component,
     Child2Component,
     Parent2Component,
-    InbuildPipeComponent
+    InbuildPipeComponent,
+    CustomPipeComponent,
+    SummaryPipe,
+    CourseComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CourseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
