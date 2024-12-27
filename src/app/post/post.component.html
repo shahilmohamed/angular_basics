@@ -1,1 +1,52 @@
-<p>post works!</p>
+<!-- <p>post works!</p> -->
+<label >Title::&nbsp; &nbsp;</label> 
+<input #inputtitle type="text" placeholder="Enter the title"><br><br>
+<label >Body::&nbsp;&nbsp;</label>
+<input #inputbody type="text" placeholder="Enter the body"><br><br>
+<button (click)="onSend(inputtitle.value,inputbody.value)">Send</button>
+<hr>
+<div [hidden]="isHidden">
+    <label for="">ID:: &nbsp;&nbsp;</label>
+    <input [(ngModel)]="id" type="text" placeholder="Enter the Id" readonly><br><br>
+    
+    <label for="">Title:: &nbsp;&nbsp;</label>
+    <input [(ngModel)]="title" type="text" placeholder="Enter the title"><br><br>
+    
+    <label for="">Body:: &nbsp;&nbsp;</label>
+    <input [(ngModel)]="body" type="text" placeholder="Enter the body"><br><br>
+    <button (click)="onUpdate()">Update</button>
+</div>
+
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let item of post">
+            <td>{{item.id}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.body}}</td>
+            <td><button (click)="onEdit(item)">Edit</button>
+            <td><button (click)=" onDelete(item.id)">Delete</button></td>  
+        </tr>
+    </tbody>
+ </table>
+ <!-- <table>
+    <thead>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Mobile</th>
+    </thead>
+    <tbody>
+        <tr *ngFor = 'let item of staffdata'>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.location}}</td>
+            <td>{{item.mobile}}</td>
+        </tr>
+    </tbody>
+ </table> -->

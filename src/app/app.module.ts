@@ -26,6 +26,16 @@ import { SummaryPipe } from './utility/summary.pipes';
 import { CourseComponent } from './course/course.component';
 import { CourseService } from './course.service';
 import { PostComponent } from './post/post.component';
+import { HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { Page1Component } from './page1/page1.component';
+import { Page2Component } from './page2/page2.component';
+import { Page3Component } from './page3/page3.component';
+import { FollowerComponent } from './follower/follower.component';
+import { QueryparameterComponent } from './queryparameter/queryparameter.component';
+import { NotfoundComponent } from './notfound/notfound.component';
+import { ProductComponent } from './product/product.component';
+import { MyFollowerComponent } from './my-follower/my-follower.component'
 
 @NgModule({
   declarations: [
@@ -50,12 +60,22 @@ import { PostComponent } from './post/post.component';
     CustomPipeComponent,
     SummaryPipe,
     CourseComponent,
-    PostComponent
+    PostComponent,
+    HomeComponent,
+    Page1Component,
+    Page2Component,
+    Page3Component,
+    FollowerComponent,
+    QueryparameterComponent,
+    NotfoundComponent,
+    ProductComponent,
+    MyFollowerComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [CourseService],
   bootstrap: [AppComponent]
