@@ -35,7 +35,10 @@ import { FollowerComponent } from './follower/follower.component';
 import { QueryparameterComponent } from './queryparameter/queryparameter.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { ProductComponent } from './product/product.component';
-import { MyFollowerComponent } from './my-follower/my-follower.component'
+import { MyFollowerComponent } from './my-follower/my-follower.component';
+import { MobileComponent } from './product/mobile/mobile.component';
+import { TelevisionComponent } from './product/television/television.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +72,10 @@ import { MyFollowerComponent } from './my-follower/my-follower.component'
     QueryparameterComponent,
     NotfoundComponent,
     ProductComponent,
-    MyFollowerComponent
+    MyFollowerComponent,
+    MobileComponent,
+    TelevisionComponent,
+    LaptopComponent
   ],
   imports: [
     BrowserModule,

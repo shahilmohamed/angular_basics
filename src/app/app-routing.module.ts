@@ -8,6 +8,10 @@ import { MyFollowerComponent } from './my-follower/my-follower.component';
 import { QueryparameterComponent } from './queryparameter/queryparameter.component';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { ProductComponent } from './product/product.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { MobileComponent } from './product/mobile/mobile.component';
+import { TelevisionComponent } from './product/television/television.component';
 
 const routes: Routes = [
   {
@@ -30,6 +34,25 @@ const routes: Routes = [
   },
   {
     path:'queryparameter',component:QueryparameterComponent
+  },
+  {
+    path:'product',children:[
+      {
+        path:'',component:ProductComponent
+      },
+      {
+        path:'laptop',component:LaptopComponent
+      },
+      {
+        path:'mobile',component:MobileComponent
+      },
+      {
+        path:'tv',component:TelevisionComponent
+      }
+    ]
+  },
+  {
+    path:'user',loadChildren:()=>import('./user/user.module').then(m=>m.UserModule)
   },
   {
     path:'**',component:NotfoundComponent
