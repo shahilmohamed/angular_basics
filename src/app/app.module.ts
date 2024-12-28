@@ -39,6 +39,8 @@ import { MyFollowerComponent } from './my-follower/my-follower.component';
 import { MobileComponent } from './product/mobile/mobile.component';
 import { TelevisionComponent } from './product/television/television.component';
 import { LaptopComponent } from './product/laptop/laptop.component';
+import { DemoBootstrapComponent } from './demo-bootstrap/demo-bootstrap.component';
+import { TdfDemoComponent } from './tdf-demo/tdf-demo.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +77,9 @@ import { LaptopComponent } from './product/laptop/laptop.component';
     MyFollowerComponent,
     MobileComponent,
     TelevisionComponent,
-    LaptopComponent
+    LaptopComponent,
+    DemoBootstrapComponent,
+    TdfDemoComponent
   ],
   imports: [
     BrowserModule,

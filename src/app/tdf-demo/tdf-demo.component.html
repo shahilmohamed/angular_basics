@@ -1,0 +1,93 @@
+<p>tdf-demo works!</p>
+<div class="container">
+    <div class="row">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            {{f.value | json}}
+            <div class="col">
+                <!-- User name -->
+                <div class="form-group">
+                    <label for="">User name</label>
+                    <input type="text" class="form-control" minlength="5" pattern="admin" ngModel name="myusername"
+                        #username="ngModel" required placeholder="Enter User name">
+                    <div *ngIf="username.touched && !username.valid" class="alert alert-danger">
+                        **Please enter the user name
+                        <div *ngIf="username.errors?.minlength">
+                            **Please enter the minimum length of user name is
+                            {{username.errors?.minlength.requiredLength}}
+                        </div>
+                        <div *ngIf="username.errors?.pattern">
+                            *please enter valid format
+                        </div>
+                    </div>
+                </div>
+                <!-- Comment -->
+                <div class="form-group">
+                    <label for="">Comment</label>
+                    <textarea ngModel name="comment" #comment="ngModel" required class="form-control"
+                        placeholder="Enter the comment" cols="30" rows="10"></textarea>
+                    <div *ngIf="comment.touched && comment.invalid" class="alert alert-danger">
+                        **Please enter the comment
+                    </div>
+                </div>
+                <!-- Check box -->
+                <div class="form-group">
+                    <div class="checkbox">
+                        <label for="check1">
+                            <input type="checkbox" id="check1" ngModel name="issubscribed" #mail="ngModel" required> I
+                            agree
+                            all the terms & conditions.
+                        </label>
+                    </div>
+                </div>
+                <!-- Radio button -->
+                <div class="form-group">
+                    <div class="radio">
+                        <label for="con0">
+                            <input ngModel #contact="ngModel" type="radio" name="con" id="con0" value="email"
+                                required>Email
+                        </label>
+                    </div>
+                    <div class="radio">
+                        <label for="con1">
+                            <input ngModel #contact="ngModel" type="radio" name="con" id="con1" value="phone"
+                                required>Phone
+                        </label>
+                    </div>
+                </div>
+                <!-- Drop down box -->
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select ngModel name="country" id="country" class="form-control" required>
+                        <option *ngFor="let item of country" [ngValue]="item">{{item.name}}</option>
+                    </select>
+                </div>
+                <!-- Email box -->
+                <div class="form-group">
+                    <label for="myemail">Email Id</label>
+                    <input ngModel type="email" #email="ngModel" name="email" id="myemail" class="form-control"
+                        placeholder="Enter Email Id" [pattern]="email_pattern" required>
+                    <div class="alert alert-danger" *ngIf="email.touched && !email.valid">
+                        Please enter the Email Id...
+                        <div *ngIf="email.errors?.pattern">
+                            **Please enter appropriate email id
+                        </div>
+                    </div>
+                </div>
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="mypassword">Password</label>
+                    <input ngModel type="password" #password="ngModel" name="password" id="mypassword" class="form-control" 
+                    placeholder="Enter the password..." [pattern]="password_pattern" required>
+                    <div class="alert alert-danger" *ngIf="password.touched && !password.valid">
+                        **Please Enter the password
+                        <div *ngIf="password.errors?.pattern">
+                            **Please enter the valid format
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <button [disabled]="! f.valid" class="btn btn-outline-success">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
